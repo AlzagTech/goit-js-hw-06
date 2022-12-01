@@ -17,3 +17,9 @@ function onDecrementTheValueOfTheCounter() {
   counterValue -= 1;
   return (document.querySelector('#value').textContent = counterValue);
 }
+
+module.exports = {
+  kit: {
+    floc: true,
+  },
+};
