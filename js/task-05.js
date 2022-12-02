@@ -1,13 +1,12 @@
 const refs = {
-    input: document.querySelector('#name-input'),
-    span: document.querySelector('#name-output'),
+  input: document.querySelector('#name-input'),
+  span: document.querySelector('#name-output'),
 };
 
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    event.currentTarget.value
-      ? (refs.span.textContent = event.currentTarget.value)
-      : (refs.span.textContent = 'Anonymous');
-    
-};
+  const value = event.currentTarget.value.trim();
+  const text = value ? value : 'Anonymous';
+  refs.span.textContent = text;
+}
