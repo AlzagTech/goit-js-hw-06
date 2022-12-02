@@ -1,11 +1,13 @@
 const inputEl = document.querySelector('#validation-input');
 
-console.log(inputEl.dataset.length);
-
 inputEl.addEventListener('blur', onAddValidationClass);
 
 function onAddValidationClass(event) {
-    event.currentTarget.value.length === parseInt(inputEl.dataset.length)
-      ? inputEl.classList.add('valid')
-      : inputEl.classList.add('invalid');
+  inputEl.classList.remove('valid', 'invalid');
+
+  const addClass = (value) => inputEl.classList.add(value);
+
+  event.currentTarget.value.length === parseInt(inputEl.dataset.length)
+    ? addClass('valid')
+    : addClass('invalid');
 }
