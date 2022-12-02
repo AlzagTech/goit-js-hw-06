@@ -11,6 +11,8 @@ const refs = {
 refs.btnEl.addEventListener('click', onMakeRandomBgColor);
 
 function onMakeRandomBgColor(event) {
-  refs.bodyEl.style.backgroundColor = `${getRandomHexColor()}`;
-  refs.spanEl.textContent = `${getRandomHexColor()}`;
+  const hexColor = getRandomHexColor();
+
+  refs.bodyEl.style.backgroundColor = `${hexColor}`;
+  refs.spanEl.textContent = `${hexColor}`;
 }
