@@ -7,7 +7,7 @@ function onAddValidationClass(event) {
 
   const addClass = (value) => inputEl.classList.add(value);
 
-  event.currentTarget.value.length === parseInt(inputEl.dataset.length)
+  event.currentTarget.value.length === Number(inputEl.dataset.length)
     ? addClass('valid')
     : addClass('invalid');
 }
